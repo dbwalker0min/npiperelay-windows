@@ -1,5 +1,15 @@
 # Executable for `npiperelay`
-This is the Windows executable of the [`npiperelay`](https://github.com/jstarks/npiperelay) project, which does not have a pre-built image available.
+This is the Windows executable of the [`npiperelay`](https://github.com/jstarks/npiperelay) project, for which a pre-built image is not available.
+
+# Installation
+
+To install this, download the file to a location within your WSL filesystem. Then, so you can access it more easily, run the command:
+
+```
+sudo cp npiperelay.exe /usr/local/bin/npiperelay.exe
+```
+
+Now, it should be available everywhere within WSL.
 
 # Usage
 
@@ -31,8 +41,4 @@ GOOS=windows go install github.com/jstarks/npiperelay@latest
 ```
 
 This deposits a file in `$HOME/go/bin/windows_amd64` called `npiperelay.exe`. To make it a bit more accessible, I create a link in my `/usr/local/bin` directory.
-
-```bash
-sudo ln -s $HOME/go/bin/windows_amd64/npiperelay.exe /usr/local/bin/npiperelay.exe
-```
 
